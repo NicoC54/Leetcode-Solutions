@@ -1,12 +1,12 @@
-// Last updated: 15/09/2026 12:02:47
-#include <unordered_map>
+// Last updated: 15/09/2026 12:07:18
+#include <map>
 #include <vector>
 
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
 
-        std::unordered_map<int,char> Common ={};
+        std::map<int,char> Common ={};
         int counter=0;
         int min_counter=0;
         std::string output = "";
