@@ -1,4 +1,4 @@
-// Last updated: 14/10/2026 21:19:28
+// Last updated: 14/10/2026 21:20:42
 class Solution {
 public:
     int maxArea(vector<int>& height) {
@@ -8,7 +8,7 @@ public:
         int aire_max = 0;
         int aire = 0;
 
-        for (int i=0; i< height.size(); i++){
+        while (barre_gauche < barre_droite){
             int largeur = barre_droite - barre_gauche;
             aire = largeur * std::min(height[barre_gauche], height[barre_droite]);
 
