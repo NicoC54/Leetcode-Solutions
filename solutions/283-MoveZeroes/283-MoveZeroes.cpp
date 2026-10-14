@@ -1,25 +1,19 @@
-// Last updated: 06/09/2026 11:48:31
+// Last updated: 14/10/2026 20:46:55
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
+        int index_writable = 0;
 
-        int k = 0;
-        int length = nums.size();
-        for (int i = 0 ; i < nums.size() ; i++) {
-
-            if (nums[i] != 0) {
-
-                nums[k] = nums[i];
-                k = k + 1 ;
-            
+        for (int num : nums){
+            if (num != 0){
+                nums[index_writable] = num;
+                index_writable++;
             }
-            }
-
-        for  (int j=k ; j < nums.size() ; j++) {
-            nums[j] = 0;
         }
 
+        for (int i = index_writable; i < nums.size(); i ++){
+            nums[i] = 0;
+        }
         
-  
-}
+    }
 };
